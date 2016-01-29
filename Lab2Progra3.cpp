@@ -5,7 +5,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int factorial(int numero);
+unsigned long long int factorial(int numero);
 double euler(int numero);
 
 int main(int argc, char*argv[]){
@@ -24,14 +24,14 @@ int main(int argc, char*argv[]){
 		resp = euler(numero);
 		cout<<"El numero seria: "<<resp<<endl;
 	}else if(opcion==2){
-
+		
 	}else{
 
 	}	
 }
 
-int factorial(int numero){
-	int resultado=1;
+unsigned long long int factorial(int numero){
+	unsigned long long int resultado=1;
 
 	for(int i = 1; i<=numero;i++){
 		resultado*=i;
@@ -41,7 +41,7 @@ int factorial(int numero){
 }
 
 double euler(int numero){
-	int limite = 15;
+	int limite = 22;
 	double respuesta=1.0;
 
 	for(int i = 1; i<=limite;i++){
