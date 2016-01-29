@@ -7,12 +7,12 @@ using std::endl;
 
 unsigned long long int factorial(int numero);
 double euler(int numero);
-double ladosTrapezio(int a1, int a2, int b1, int b2);
+double ladosTrapezio(double a1, double a2, double b1, double b2);
 double altura(double lado1, double lado2, double lado3, double semi);
 double area(double alt, double diagonal);
 int main(int argc, char*argv[]){
 	int opcion, numero;
-	double a1,a2,b1,b2,c1,c2,d1,d2;
+	double a1=0.0,a2=0.0,b1=0.0,b2=0.0,c1=0.0,c2=0.0,d1=0.0,d2=0.0;
 	double resp, lado1=0.0,lado2=0.0,lado3=0.0,lado4=0.0, diagonal=0.0, semi1=0.0, semi2=0.0;
 	double alt1, alt2,alt3,alt4,alt5,alt6;
 
@@ -130,9 +130,9 @@ double euler(int numero){
 	return respuesta;	
 }
 
-double ladosTrapezio(int a1, int a2, int b1, int b2){
+double ladosTrapezio(double a1, double a2, double b1, double b2){
 	double medida=0;
-	medida = sqrt(pow(a1-a2,2)+pow(b1-b2,2));
+	medida = sqrt((pow(a1-b1,2))+(pow(a2-b2,2)));
 	return medida;
 }
 
@@ -146,4 +146,5 @@ double altura(double lado1, double lado2, double lado3, double semi){
 double area(double alt, double diagonal){
 	double ar;
 	ar= (diagonal*alt)/2;
+return ar;
 }
